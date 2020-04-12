@@ -7,6 +7,7 @@
     let theme = 'dark';
     if (localStorage) {
       theme = localStorage.getItem('theme') || theme;
+      localStorage.setItem('theme', theme);
     }
 
     document.body.classList.add(theme);
