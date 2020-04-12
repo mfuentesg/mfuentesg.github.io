@@ -16,7 +16,7 @@ body.dark {
 }
 
 h1 {
-    font-weight: bolder;
+    font-weight: 900;
     margin: 0;
 }
 
@@ -71,8 +71,8 @@ body.dark .section p {
 
 .icons a {
     color: #000;
-    font-weight: normal;
-    font-size: 30px;
+    font-size: 48px;
+    padding: 0 10px;
     transition: ease-in-out all 0.1s;
 }
 
