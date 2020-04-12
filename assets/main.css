@@ -3,21 +3,42 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    border: 0;
     background-color: #fff;
     font-size: 16px;
     height: 100vh;
 }
 
+body.dark {
+    background-color: #000;
+}
+
 h1 {
     font-weight: bolder;
-    color: #666;
     margin: 0;
 }
 
 p {
     font-weight: 300;
-    color: #000;
     text-align: right;
+}
+
+#switch {
+    color: #000;
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-size: 40px;
+    position: fixed;
+    right: 10px;
+    top: 0;
+    z-index: 10;
+}
+
+body.dark #switch {
+    color: #fff;
 }
 
 .section {
@@ -26,12 +47,22 @@ p {
 }
 
 .section h1 {
+    color: #666;
     font-size: 60px;
+}
+
+body.dark .section h1 {
+    color: #c6c4c4;
 }
 
 .section p {
     margin: 0;
+    color: #000;
     font-size: 15px;
+}
+
+body.dark .section p {
+    color: #c6c4c4;
 }
 
 .icons {
@@ -45,8 +76,16 @@ p {
     transition: ease-in-out all 0.1s;
 }
 
+body.dark .icons a {
+    color: #fff;
+}
+
 .icons a:hover {
     color: rgba(66, 68, 72, 0.66);
+}
+
+body.dark .icons a:hover {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #particles-js {
