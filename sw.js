@@ -2,22 +2,13 @@
 
 console.log('WORKER: executing.');
 
-var version = 'v1::';
+var version = 'v2::';
 
 var offlineFundamentals = [
   '',
-
-  // external libraries
-  'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
-  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
-  'https://fonts.googleapis.com/css?family=Lato:300,900',
-
-  // app files
   '/assets/main.css',
-  '/assets/bootstrap.min.css',
   '/assets/main.js',
-  '/assets/particles.min.js',
-  '/index.html'
+  '/assets/particles.min.js'
 ];
 
 /* The install event fires when the service worker is first installed.
