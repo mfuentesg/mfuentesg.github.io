@@ -1,10 +1,10 @@
 !(function() {
   document.addEventListener('DOMContentLoaded', init);
 
-  const color = '#a7a7a7';
+  var color = '#a7a7a7';
 
   function init() {
-    let theme = 'dark';
+    var theme = 'dark';
     if (localStorage) {
       theme = localStorage.getItem('theme') || theme;
       localStorage.setItem('theme', theme);
@@ -12,7 +12,7 @@
 
     document.body.classList.add(theme);
 
-    const particleConfig = {
+    var particleConfig = {
       particles: {
         number: {
           value: 80,
@@ -120,8 +120,8 @@
 
     document.getElementById('switch').addEventListener('click', function() {
       if (localStorage) {
-        const currentTheme = localStorage.getItem('theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        var currentTheme = localStorage.getItem('theme');
+        var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         localStorage.setItem('theme', newTheme);
         document.body.classList.remove(currentTheme);
         document.body.classList.add(newTheme);
@@ -129,6 +129,14 @@
     });
 
     particlesJS('particles-js', particleConfig);
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(function () {
+          console.log("Service Worker Registered");
+        });
+    }
   }
 
 })();
